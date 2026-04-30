@@ -1,4 +1,4 @@
-# 1. Definir catalogo como tupla de subtuplas (título, director, año, puntuación)
+# Definir catalogo como tupla de subtuplas (título, director, año, puntuación)
 catalogo = (
     ("El Padrino", "Francis Ford Coppola", 1972, 9.2),
     ("Cadena Perpetua", "Frank Darabont", 1994, 9.3),
@@ -8,12 +8,12 @@ catalogo = (
     ("Forrest Gump", "Robert Zemeckis", 1994, 8.8),
 )
 
-# 2. Recorrer catalogo con for desempaquetando los cuatro campos
+# Recorrer catalogo con for desempaquetando los cuatro campos
 print("=== CATÁLOGO DE PELÍCULAS ===\n")
 for titulo, director, año, puntuacion in catalogo:
     print(f" {titulo} ({año}) - Dirigida por {director} - Puntuación: {puntuacion}")
 
-# 3. Usar operador * para separar primera película del resto
+# Usar operador * para separar primera película del resto
 primera_pelicula, *resto_peliculas = catalogo
 print("\n" + "="*50)
 print(f"\n Primera película del catálogo:\n   {primera_pelicula[0]} ({primera_pelicula[2]})")
@@ -21,7 +21,7 @@ print(f"\n Resto de películas ({len(resto_peliculas)}):")
 for titulo, director, año, puntuacion in resto_peliculas:
     print(f"   - {titulo} ({año})")
 
-# 4. Implementar buscar_por_director() que devuelva tupla de coincidencias
+# Implementar buscar_por_director() que devuelva tupla de coincidencias
 def buscar_por_director(director):
     """Busca todas las películas de un director específico"""
     coincidencias = []
@@ -30,7 +30,7 @@ def buscar_por_director(director):
             coincidencias.append(pelicula)
     return tuple(coincidencias)
 
-# 5. Implementar obtener_estadisticas() retornando (min, max, promedio)
+# Implementar obtener_estadisticas() retornando (min, max, promedio)
 def obtener_estadisticas(peliculas):
     """Calcula la puntuación mínima, máxima y promedio de una lista de películas"""
     if not peliculas:
@@ -54,7 +54,7 @@ if peliculas_nolan:
 else:
     print(f"   No se encontraron películas de {director_buscar}")
 
-# 6. Desempaquetar retorno de obtener_estadisticas
+# Desempaquetar retorno de obtener_estadisticas
 print("\n" + "="*50)
 print("\n ESTADÍSTICAS DEL CATÁLOGO COMPLETO:")
 
